@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UITableViewController {
+class HomeViewController: BaseTableViewController {
 
     var vm: HomeViewModel = HomeViewModel()
     
@@ -40,11 +40,13 @@ class HomeViewController: UITableViewController {
     
     // MARK: - Setup
     
-    func registerCells() {
-        // register custom cells here
+    override func registerCells() {
+        tableView.register(UINib(nibName: "PhotoTableViewCell", bundle: nil), forCellReuseIdentifier: "PhotoTableViewCell")
     }
     
     func setupViews() {
+        title = "Test"
+        
         refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl?.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
     }
@@ -52,10 +54,13 @@ class HomeViewController: UITableViewController {
     
     // MARK: - Actions
     
-    @objc func refresh(_ sender: AnyObject) {
+    @IBAction func reloadButtonAction(_ sender: Any) {
         vm.loadData()
     }
 
+    @objc func refresh(_ sender: AnyObject) {
+        vm.getPhotos(isRefresh: true)
+    }
 }
 
 
@@ -63,11 +68,21 @@ class HomeViewController: UITableViewController {
 
 extension HomeViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return vm.numberOfRowsInSection(section: section)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cellVM = vm.cellViewModel(at: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellVM.cellIdentifier) as? BaseTableViewCell
+        
+        cell?.configure(representable: cellVM)
+        
+        cell?.layoutIfNeeded()
+        return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150.00
     }
 }
 
@@ -80,7 +95,7 @@ extension HomeViewController: HomeViewModelViewDelegate {
     }
     
     func showLoadingIndicator(_ show: Bool) {
-        
+        self.showLoadingAlert(show)
     }
     
     func showNoTableData(_ show: Bool) {

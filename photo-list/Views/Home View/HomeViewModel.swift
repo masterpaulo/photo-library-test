@@ -34,20 +34,46 @@ class HomeViewModel {
        getPhotos()
     }
     
+    func cellViewModels() -> [CellRepresentable] {
+        let cellVMs: [CellRepresentable] = photosList.map { photo in
+            return PhotoTableCellViewModel(photo: photo)
+        }
+        
+        return cellVMs
+    }
+    
     // MARK: - Methods
     
     // MARK: - Display Properties
     
 }
 
+// MARK: - BaseTableViewModelProtocol
+
+extension HomeViewModel: BaseTableViewModelProtocol {
+    func numberOfSections() -> Int {
+        return 1
+    }
+    
+    func numberOfRowsInSection(section: Int) -> Int {
+        return cellViewModels().count
+    }
+    
+    func cellViewModel(at indexPath: IndexPath) -> CellRepresentable {
+        return cellViewModels()[indexPath.item]
+    }
+}
+
 
 // MARK: - Network Calls
 
 extension HomeViewModel {
-    func getPhotos() {
+    func getPhotos(isRefresh: Bool = false) {
         DispatchQueue.main.async {
             self.viewDelegate?.showNoTableData(false)
-            self.viewDelegate?.showLoadingIndicator(true)
+            if !isRefresh {
+                self.viewDelegate?.showLoadingIndicator(true)
+            }
         }
         
         APIManager().getPhotos { [weak self] result in
@@ -69,6 +95,9 @@ extension HomeViewModel {
                         self.viewDelegate?.showNoTableData(true)
                     }
                 }
+            }
+            DispatchQueue.main.async {
+                self.viewDelegate?.showLoadingIndicator(false)
             }
         }
     }
