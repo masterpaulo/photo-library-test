@@ -66,9 +66,9 @@
 		21EE6AF3284DE96B00213659 /* photo-list */ = {
 			isa = PBXGroup;
 			children = (
+				21EE6B09284DEC6A00213659 /* Views */,
 				21EE6B12284DF71200213659 /* Services */,
 				21EE6B0F284DF0A800213659 /* Models */,
-				21EE6B09284DEC6A00213659 /* Views */,
 				21EE6AF4284DE96B00213659 /* AppDelegate.swift */,
 				21EE6AF6284DE96B00213659 /* SceneDelegate.swift */,
 				21EE6AFA284DE96B00213659 /* Main.storyboard */,
