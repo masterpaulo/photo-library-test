@@ -31,25 +31,33 @@
                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isOval" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HU3-DD-FRx">
-                                                <rect key="frame" x="163.5" y="59.5" width="40" height="22.5"/>
+                                                <rect key="frame" x="155.5" y="59.5" width="48" height="22.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="ID: 10" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihU-Iz-Odt">
-                                                        <rect key="frame" x="4" y="4" width="32" height="14.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="ID: 10" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihU-Iz-Odt">
+                                                        <rect key="frame" x="8" y="4" width="32" height="14.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                                 <constraints>
                                                     <constraint firstItem="ihU-Iz-Odt" firstAttribute="top" secondItem="HU3-DD-FRx" secondAttribute="top" constant="4" id="QJ6-77-h4x"/>
                                                     <constraint firstAttribute="bottom" secondItem="ihU-Iz-Odt" secondAttribute="bottom" constant="4" id="VRv-YF-TAm"/>
-                                                    <constraint firstAttribute="trailing" secondItem="ihU-Iz-Odt" secondAttribute="trailing" constant="4" id="dPe-vb-6Eu"/>
-                                                    <constraint firstItem="ihU-Iz-Odt" firstAttribute="leading" secondItem="HU3-DD-FRx" secondAttribute="leading" constant="4" id="q6t-YQ-Vav"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ihU-Iz-Odt" secondAttribute="trailing" constant="8" id="dPe-vb-6Eu"/>
+                                                    <constraint firstItem="ihU-Iz-Odt" firstAttribute="leading" secondItem="HU3-DD-FRx" secondAttribute="leading" constant="8" id="q6t-YQ-Vav"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -83,6 +91,11 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="4"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="dropShadow" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
@@ -107,6 +120,9 @@
         <namedColor name="Base Cell Background Color">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
