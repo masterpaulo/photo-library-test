@@ -45,7 +45,7 @@ class HomeViewController: BaseTableViewController {
     }
     
     func setupViews() {
-        title = "Test"
+        title = vm.windowTitle
         
         refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl?.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
@@ -84,6 +84,10 @@ extension HomeViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150.00
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        vm.selectItem(at: indexPath)
+    }
 }
 
 // MARK: - HomeViewModelViewDelegate
@@ -100,5 +104,11 @@ extension HomeViewController: HomeViewModelViewDelegate {
     
     func showNoTableData(_ show: Bool) {
         tableView.backgroundView = show ? noTableDataView : nil
+    }
+    
+    func showPhotoDetails(with viewModel: DetailsViewModel) {
+        let vc = DetailsViewController.instantiate(fromAppStoryboard: .main)
+        vc.vm = viewModel
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

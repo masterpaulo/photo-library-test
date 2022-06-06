@@ -90,6 +90,47 @@
             </objects>
             <point key="canvasLocation" x="567" y="104"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="Iuh-UQ-STD">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" id="f3E-tN-HcI" customClass="DetailsViewController" customModule="photo_list" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YXS-w7-CsQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ugF-ZQ-1ej">
+                                <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ztu-Lc-Ds3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPc-kh-Kxb">
+                                <rect key="frame" x="20" y="364" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BDK-tb-Krf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tPc-kh-Kxb" firstAttribute="leading" secondItem="BDK-tb-Krf" secondAttribute="leading" constant="20" id="0m6-xb-hp6"/>
+                            <constraint firstItem="ugF-ZQ-1ej" firstAttribute="leading" secondItem="BDK-tb-Krf" secondAttribute="leading" id="AeH-Tv-VDN"/>
+                            <constraint firstItem="ugF-ZQ-1ej" firstAttribute="top" secondItem="BDK-tb-Krf" secondAttribute="top" id="RLv-nG-IQF"/>
+                            <constraint firstItem="ugF-ZQ-1ej" firstAttribute="trailing" secondItem="BDK-tb-Krf" secondAttribute="trailing" id="clZ-rx-Sfl"/>
+                            <constraint firstItem="tPc-kh-Kxb" firstAttribute="top" secondItem="ugF-ZQ-1ej" secondAttribute="bottom" constant="20" id="e1e-7A-lZx"/>
+                            <constraint firstItem="BDK-tb-Krf" firstAttribute="trailing" secondItem="tPc-kh-Kxb" secondAttribute="trailing" constant="20" id="vMJ-Yk-W9O"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="ugF-ZQ-1ej" id="p0G-2P-riL"/>
+                        <outlet property="titleLabel" destination="tPc-kh-Kxb" id="3BK-yb-yAX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fH3-PR-gKv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489.8550724637682" y="103.79464285714285"/>
+        </scene>
     </scenes>
     <resources>
         <image name="eyeglasses" catalog="system" width="128" height="54"/>

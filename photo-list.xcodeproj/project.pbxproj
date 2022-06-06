@@ -25,6 +25,10 @@
 		21EE6B26284E045100213659 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE6B25284E045100213659 /* PhotoTableViewCell.swift */; };
 		21EE6B28284E045A00213659 /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21EE6B27284E045A00213659 /* PhotoTableViewCell.xib */; };
 		21EE6B2B284E0FF300213659 /* UIImageView+imageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE6B2A284E0FF300213659 /* UIImageView+imageCache.swift */; };
+		21EE6B2D284E112C00213659 /* AppStoryboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE6B2C284E112C00213659 /* AppStoryboards.swift */; };
+		21EE6B31284E11F300213659 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE6B30284E11F300213659 /* DetailsViewController.swift */; };
+		21EE6B33284E121A00213659 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE6B32284E121A00213659 /* DetailsViewModel.swift */; };
+		21EE6B35284E14A800213659 /* Collection+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE6B34284E14A800213659 /* Collection+SafeIndex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		21EE6B25284E045100213659 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		21EE6B27284E045A00213659 /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
 		21EE6B2A284E0FF300213659 /* UIImageView+imageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+imageCache.swift"; sourceTree = "<group>"; };
+		21EE6B2C284E112C00213659 /* AppStoryboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoryboards.swift; sourceTree = "<group>"; };
+		21EE6B30284E11F300213659 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		21EE6B32284E121A00213659 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		21EE6B34284E14A800213659 /* Collection+SafeIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+SafeIndex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 				21EE6B09284DEC6A00213659 /* Views */,
 				21EE6B12284DF71200213659 /* Services */,
 				21EE6B0F284DF0A800213659 /* Models */,
+				21EE6B2E284E113200213659 /* Utils */,
 				21EE6B29284E0FD000213659 /* Extensions */,
 				21EE6AF4284DE96B00213659 /* AppDelegate.swift */,
 				21EE6AF6284DE96B00213659 /* SceneDelegate.swift */,
@@ -109,6 +118,7 @@
 				21EE6B1C284E028200213659 /* Base */,
 				21EE6B1A284E019400213659 /* Custom Cells */,
 				21EE6B08284DEC3E00213659 /* Home View */,
+				21EE6B2F284E11DD00213659 /* Details View */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,9 +180,27 @@
 		21EE6B29284E0FD000213659 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				21EE6B34284E14A800213659 /* Collection+SafeIndex.swift */,
 				21EE6B2A284E0FF300213659 /* UIImageView+imageCache.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		21EE6B2E284E113200213659 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				21EE6B2C284E112C00213659 /* AppStoryboards.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		21EE6B2F284E11DD00213659 /* Details View */ = {
+			isa = PBXGroup;
+			children = (
+				21EE6B30284E11F300213659 /* DetailsViewController.swift */,
+				21EE6B32284E121A00213659 /* DetailsViewModel.swift */,
+			);
+			path = "Details View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,11 +280,15 @@
 				21EE6AF5284DE96B00213659 /* AppDelegate.swift in Sources */,
 				21EE6B26284E045100213659 /* PhotoTableViewCell.swift in Sources */,
 				21EE6AF7284DE96B00213659 /* SceneDelegate.swift in Sources */,
+				21EE6B2D284E112C00213659 /* AppStoryboards.swift in Sources */,
 				21EE6B1E284E035600213659 /* BaseTableViewCell.swift in Sources */,
 				21EE6B2B284E0FF300213659 /* UIImageView+imageCache.swift in Sources */,
 				21EE6B0E284DECC300213659 /* HomeViewModel.swift in Sources */,
 				21EE6B20284E039300213659 /* BaseTableViewModel.swift in Sources */,
 				21EE6B0C284DECB900213659 /* HomeViewController.swift in Sources */,
+				21EE6B33284E121A00213659 /* DetailsViewModel.swift in Sources */,
+				21EE6B31284E11F300213659 /* DetailsViewController.swift in Sources */,
+				21EE6B35284E14A800213659 /* Collection+SafeIndex.swift in Sources */,
 				21EE6B11284DF0D200213659 /* Photo.swift in Sources */,
 				21EE6B22284E03D100213659 /* BaseTableViewController.swift in Sources */,
 				21EE6B24284E043D00213659 /* PhotoTableCellViewModel.swift in Sources */,

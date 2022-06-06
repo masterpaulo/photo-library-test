@@ -11,6 +11,7 @@ protocol HomeViewModelViewDelegate {
     func updateView()
     func showNoTableData(_ show: Bool)
     func showLoadingIndicator(_ show: Bool)
+    func showPhotoDetails(with viewModel: DetailsViewModel)
 }
 
 class HomeViewModel {
@@ -44,7 +45,15 @@ class HomeViewModel {
     
     // MARK: - Methods
     
+    func selectItem(at indexPath: IndexPath) {
+        guard let photo = photosList[safe: indexPath.item] else { return }
+        let detailsViewModel = DetailsViewModel(photo: photo)
+        viewDelegate?.showPhotoDetails(with: detailsViewModel)
+    }
+    
     // MARK: - Display Properties
+    
+    var windowTitle: String { "Test" }
     
 }
 
