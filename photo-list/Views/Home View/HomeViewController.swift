@@ -24,13 +24,13 @@ class HomeViewController: BaseTableViewController {
         setupViews()
 
         vm.viewDelegate = self
+        
+        vm.loadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         updateView()
-        
-        vm.loadData()
     }
     
     override func viewDidLayoutSubviews() {
