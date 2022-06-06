@@ -22,6 +22,6 @@ class PhotoTableViewCell: BaseTableViewCell {
         titleLabel.text = viewModel.title
         
         thumbnailImageView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        //avatarImageView.loadImage(fromURL: viewModel.imageURL)
+        thumbnailImageView.loadImage(fromURL: viewModel.imageURL)
     }
 }

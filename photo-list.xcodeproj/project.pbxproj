@@ -24,6 +24,7 @@
 		21EE6B24284E043D00213659 /* PhotoTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE6B23284E043D00213659 /* PhotoTableCellViewModel.swift */; };
 		21EE6B26284E045100213659 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE6B25284E045100213659 /* PhotoTableViewCell.swift */; };
 		21EE6B28284E045A00213659 /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21EE6B27284E045A00213659 /* PhotoTableViewCell.xib */; };
+		21EE6B2B284E0FF300213659 /* UIImageView+imageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE6B2A284E0FF300213659 /* UIImageView+imageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		21EE6B23284E043D00213659 /* PhotoTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableCellViewModel.swift; sourceTree = "<group>"; };
 		21EE6B25284E045100213659 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		21EE6B27284E045A00213659 /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
+		21EE6B2A284E0FF300213659 /* UIImageView+imageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+imageCache.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				21EE6B09284DEC6A00213659 /* Views */,
 				21EE6B12284DF71200213659 /* Services */,
 				21EE6B0F284DF0A800213659 /* Models */,
+				21EE6B29284E0FD000213659 /* Extensions */,
 				21EE6AF4284DE96B00213659 /* AppDelegate.swift */,
 				21EE6AF6284DE96B00213659 /* SceneDelegate.swift */,
 				21EE6AFA284DE96B00213659 /* Main.storyboard */,
@@ -164,6 +167,14 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		21EE6B29284E0FD000213659 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				21EE6B2A284E0FF300213659 /* UIImageView+imageCache.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,6 +253,7 @@
 				21EE6B26284E045100213659 /* PhotoTableViewCell.swift in Sources */,
 				21EE6AF7284DE96B00213659 /* SceneDelegate.swift in Sources */,
 				21EE6B1E284E035600213659 /* BaseTableViewCell.swift in Sources */,
+				21EE6B2B284E0FF300213659 /* UIImageView+imageCache.swift in Sources */,
 				21EE6B0E284DECC300213659 /* HomeViewModel.swift in Sources */,
 				21EE6B20284E039300213659 /* BaseTableViewModel.swift in Sources */,
 				21EE6B0C284DECB900213659 /* HomeViewController.swift in Sources */,
