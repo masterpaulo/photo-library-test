@@ -15,6 +15,19 @@ class PhotoTableViewCell: BaseTableViewCell {
     
     @IBOutlet var thumbnailImageView: UIImageView!
     
+    var imageUrl: String? {
+        didSet {
+            self.thumbnailImageView.image = nil
+            if let url = imageUrl {
+                UIImage.loadImageUsingCacheWithUrlString(url) { image in
+                    if url == self.imageUrl {
+                        self.thumbnailImageView.image = image
+                    }
+                }
+            }
+        }
+    }
+    
     override func configure(representable: CellRepresentable) {
         guard let viewModel = representable as? PhotoTableCellViewModel else { return }
         
@@ -22,6 +35,7 @@ class PhotoTableViewCell: BaseTableViewCell {
         titleLabel.text = viewModel.title
         
         thumbnailImageView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        thumbnailImageView.loadImage(fromURL: viewModel.imageURL)
+        
+        imageUrl = viewModel.imageURL
     }
 }

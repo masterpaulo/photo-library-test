@@ -29,6 +29,7 @@
 		21EE6B31284E11F300213659 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE6B30284E11F300213659 /* DetailsViewController.swift */; };
 		21EE6B33284E121A00213659 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE6B32284E121A00213659 /* DetailsViewModel.swift */; };
 		21EE6B35284E14A800213659 /* Collection+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE6B34284E14A800213659 /* Collection+SafeIndex.swift */; };
+		21EE6B37284E1A8E00213659 /* UIImage+Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EE6B36284E1A8E00213659 /* UIImage+Loader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		21EE6B30284E11F300213659 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		21EE6B32284E121A00213659 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		21EE6B34284E14A800213659 /* Collection+SafeIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+SafeIndex.swift"; sourceTree = "<group>"; };
+		21EE6B36284E1A8E00213659 /* UIImage+Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Loader.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			children = (
 				21EE6B34284E14A800213659 /* Collection+SafeIndex.swift */,
 				21EE6B2A284E0FF300213659 /* UIImageView+imageCache.swift */,
+				21EE6B36284E1A8E00213659 /* UIImage+Loader.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				21EE6B20284E039300213659 /* BaseTableViewModel.swift in Sources */,
 				21EE6B0C284DECB900213659 /* HomeViewController.swift in Sources */,
 				21EE6B33284E121A00213659 /* DetailsViewModel.swift in Sources */,
+				21EE6B37284E1A8E00213659 /* UIImage+Loader.swift in Sources */,
 				21EE6B31284E11F300213659 /* DetailsViewController.swift in Sources */,
 				21EE6B35284E14A800213659 /* Collection+SafeIndex.swift in Sources */,
 				21EE6B11284DF0D200213659 /* Photo.swift in Sources */,

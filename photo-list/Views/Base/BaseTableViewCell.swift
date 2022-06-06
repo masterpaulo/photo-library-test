@@ -13,6 +13,13 @@ protocol CellRepresentable {
 
 class BaseTableViewCell: UITableViewCell {
     
+    var onReuse: () -> Void = {}
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        onReuse()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
